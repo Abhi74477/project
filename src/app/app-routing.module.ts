@@ -16,6 +16,7 @@ import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
+  
   {path:'customer',component:CustomerComponent},
   {path:'booking',component:BookingsComponent},
   {path:'hygiene',component:HygieneComponent},

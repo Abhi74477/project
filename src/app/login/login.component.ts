@@ -6,7 +6,7 @@ import { UserServiceService } from '../services/user-service.service';
 import { Router } from '@angular/router';
 import { User } from '../shared/models/LoginUser';
 import swal from 'sweetalert2';
-import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatSnackBar, MatSnackBarModule} from '@angular/material/snack-bar';
 
 
 
@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
   
  
- constructor(private formBuilder:FormBuilder, private router:Router,private userService:UserServiceService,private dialogRef : MatDialog){}
+ constructor(private formBuilder:FormBuilder, private router:Router,private userService:UserServiceService,private dialogRef : MatDialog,private snack:MatSnackBar){}
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
       password: ['', Validators.compose([
@@ -47,11 +47,15 @@ export class LoginComponent implements OnInit {
       (data) => {
         console.log(data);
        swal.fire('Success','User is successfully Login','success');
-       this.router.navigate(["/home"]);
+       this.router.navigate(["/customer"]);
       
       },
       (error) => {
         console.log(error);
+        this.snack.open("Invalid Email or Password",'',{
+          duration:3000,
+          verticalPosition: 'top',
+        });
         
      
       }
