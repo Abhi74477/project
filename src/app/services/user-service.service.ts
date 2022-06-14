@@ -2,7 +2,6 @@ import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http
 import { Injectable } from '@angular/core';
 import { catchError, throwError } from 'rxjs';
 import { NewUser } from '../shared/models/NewUser';
-import { SignUp } from '../shared/models/SignUp';
 
 
 @Injectable({
