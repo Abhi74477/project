@@ -14,7 +14,8 @@ export class FeedbackService {
   }
 
   public getFeedbacks(){
-    return this.http.get(this.API + '/getFeedbacks');
+    return this.http.get(this.API + '/getFeedbacks')
   }
+
 
 }

@@ -101,9 +101,15 @@ thead {
     border-radius: 12px;
     transition: all 0.3s ease;
 }
-
+.ms-content-wrapper{
+    margin-left: 18rem;
+    
+}
 ::-webkit-scrollbar-thumb:hover {
     background: #0b3cc1;
+}
+thead{
+    background-color: #43cea2;
 }
 .ms-panel {
 
@@ -121,6 +127,7 @@ thead {
     margin-bottom: 30px;
     padding: 5%;
 }
+
 
 .ms-panel-header {
 

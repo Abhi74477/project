@@ -12,7 +12,7 @@ import { HygieneComponent } from './customer/hygiene/hygiene.component';
 import { CustomerComponent } from './customer/customer.component';
 import { SignupComponent } from './Authentication/signup/signup.component';
 import { LoginComponent } from './Authentication/login/login.component';
-import { AdminComponent } from './Admin/admin.component';
+// import { AdminComponent } from './Admin/admin.component';
 import { BookingComponent } from './Admin/booking/booking.component';
 import { FeedbackComponent } from './Admin/feedback/feedback.component';
 import { CustomersComponent } from './Admin/customers/customers.component';
@@ -37,7 +37,7 @@ const routes: Routes = [
   {path:'cart-page', component:CartPageComponent},
   {path:'login', component:LoginComponent},
   {path:'signup', component:SignupComponent},
-  {path:'admin', component:AdminComponent},
+  // {path:'admin', component:AdminComponent},
   {path:'dashboard', component:DashboardComponent},
   {path:'admin-booking', component:BookingComponent},
   {path:'feedback', component:FeedbackComponent},

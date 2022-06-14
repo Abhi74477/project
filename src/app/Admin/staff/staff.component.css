@@ -304,7 +304,15 @@ table.dataTable th {
     border-radius: 12px;
     transition: all 0.3s ease;
 }
-
+button{
+    background-color: #185a9d;
+}
+thead{
+    background-color: #43cea2;
+}
+.ms-content-wrapper{
+    margin-left: 18rem;
+}
 ::-webkit-scrollbar-thumb:hover {
     background: #0b3cc1;
 }

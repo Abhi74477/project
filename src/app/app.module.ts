@@ -44,7 +44,7 @@ import { OrderComponent } from './Admin/order/order.component';
 import { StaffComponent } from './Admin/staff/staff.component';
 import { MenuComponent } from './Admin/menu/menu.component';
 import { SupplierComponent } from './Admin/supplier/supplier.component';
-import { AdminComponent } from './Admin/admin.component';
+// import { AdminComponent } from './Admin/admin.component';
 import { BodyComponent } from './Admin/body/body.component';
 import { CustomersComponent } from './Admin/customers/customers.component';
 
@@ -76,7 +76,7 @@ import { CustomersComponent } from './Admin/customers/customers.component';
     StaffComponent,
     MenuComponent,
     SupplierComponent,
-    AdminComponent,
+    
     BodyComponent,
     CustomersComponent
    

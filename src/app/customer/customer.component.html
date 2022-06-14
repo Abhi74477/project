@@ -142,7 +142,7 @@
             </div>
             <div class="column right">
                 <div class="text">Message us</div>
-                <form action="#">
+                <!-- <form action="#">
                     <div class="fields">
                         <div class="field name">
                             <input type="text" placeholder="Name" required>
@@ -160,7 +160,29 @@
                     <div class="button">
                         <button type="submit">Send Message</button>
                     </div>
+                </form> -->
+
+                <form #feedbackAddForm="ngForm" (ngSubmit)="onSubmit(feedbackAddForm);" >
+                    <div class="fields">
+                        <div class="field name">
+                            <input type="text" placeholder="Name" name="name" (ngModel)="name" ngModel required #name="ngModel">
+                        </div>
+                        <div class="field email">
+                            <input type="email" placeholder="Email" name="email" (ngModel)="email" ngModel email required #email="ngModel">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <input type="text" placeholder="Subject" name="subject" (ngModel)="subject" ngModel required #subject="ngModel">
+                    </div>
+                    <div class="field textarea">
+                        <textarea cols="30" rows="10" placeholder="Description..." name="description" (ngModel)="description" ngModel required #description="ngModel"></textarea>
+                    </div>
+                    <div class="button">
+                        <button type="submit" [disabled]="!feedbackAddForm.valid"
+                        value="onSubmit">Send Message</button>
+                    </div>
                 </form>
+
             </div>
         </div>
     </div>
@@ -168,6 +190,6 @@
     
 </section>
 <app-footer></app-footer>
-<div *ngIf="">
+<!-- <div *ngIf="">
 <router-outlet></router-outlet>
-</div>
+</div> -->

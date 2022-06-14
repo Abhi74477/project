@@ -1,3 +1,4 @@
+<app-customer-navbar></app-customer-navbar>
 <div class="carousel slide" data-ride="carousel" id="carouselExampleIndicators">
     <ol class="carousel-indicators">
         <li class="active" data-slide-to="0" data-target="#carouselExampleIndicators"></li>
@@ -39,47 +40,53 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, fugit.</p>
         </div>
         <div class="main-form">
-            <form action="" method="get">
+            <form action="" #bookingAddForm="ngForm" (ngSubmit)="submit(bookingAddForm);">
                 <div>
                     <span>Your full name ?</span>
-                    <input type="text" name="name" id="name" placeholder="Write your name here..." required>
+                    <input type="text" name="fullName" id="name" placeholder="Write your name here..." (ngModel)="fullName" ngModel required #fullName="ngModel">
                 </div>
                 <div>
                     <span>Venue : </span>
-                    <select name="venue" id="venue" required>
-                        <option value="" class="selector">Select</option>
-                        <option value="" class="selector">BAR</option>
-                        <option value="" class="selector">TABLE</option>
-                        <option value="" class="selector">LOUNGE</option>
+                    <select name="venue" id="venue" (ngModel)="venue" ngModel required
+                    #venue="ngModel">
+                        <option value="Select" class="selector">Select</option>
+                        <option value="BAR" class="selector">BAR</option>
+                        <option value="TABLE" class="selector">TABLE</option>
+                        <option value="LOUNGE" class="selector">LOUNGE</option>
                     </select>
                 </div>
                 <div>
                     <!-- <---this is the select option--->
                     <span>How many people ?</span>
-                    <select name="people" id="people" required>
+                    <select name="people" id="people" (ngModel)="people" ngModel required
+                    #people="ngModel">
                         <option value="" class="selector">Select</option>
-                        <option value="" class="selector">1 People</option>
-                        <option value="" class="selector">2 People</option>
-                        <option value="" class="selector">3 People</option>
-                        <option value="" class="selector">4 People</option>
-                        <option value="" class="selector">5 People</option>
+                        <option value="1" class="selector">2</option>
+                        <option value="2" class="selector">3</option>
+                        <option value="3" class="selector">4</option>
+                        <option value="4" class="selector">5</option>
+                        <option value="5" class="selector">6</option>
                     </select>
                     <!-- <---this is the select option--->
                 </div>
                 <div>
                     <span>What time ?</span>
-                    <input type="text" name="time" id="time" placeholder="Time" required>
+                    <input type="time" name="time" id="time" placeholder="Time" (ngModel)="time" ngModel required
+                    #time="ngModel">
                 </div>
                 <div>
                     <span>What is the date ?</span>
-                    <input type="date" name="date" id="date" placeholder="date" required>
+                    <input type="date" name="date" id="date" placeholder="date" (ngModel)="date" ngModel required
+                    #date="ngModel">
                 </div>
                 <div>
                     <span>Your phone number ?</span>
-                    <input type="number" name="number" id="number" placeholder="Write your number here..." required>
+                    <input type="number" name="phoneNumber" id="number" placeholder="Write your number here..." (ngModel)="phoneNumber" ngModel required
+                    #phoneNumber="ngModel">
                 </div>
                 <div id="submit">
-                    <input type="submit" value="SUBMIT" id="submit">
+                    <input type="submit" value="submit" id="submit">
+                    
                 </div>
             </form>
         </div>

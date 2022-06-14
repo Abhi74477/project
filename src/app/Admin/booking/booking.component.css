@@ -1,10 +1,17 @@
 input.ng-touched.ng-invalid{
     border: 1.5px solid red;
 }
+.ms-content-wrapper{
+    margin-left: 18rem;
+}
 
 #delete {
     color: white;
     margin: 2px;
+}
+
+.thead{
+    background-color: #43cea2;
 }
 #update{
     color: white;

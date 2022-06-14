@@ -254,7 +254,13 @@ td {
     border-radius: 12px;
     transition: all 0.3s ease;
 }
+.ms-content-wrapper{
+    margin-left: 18rem;
+}
 
+thead{
+    background-color: #43cea2;
+}
 ::-webkit-scrollbar-thumb:hover {
     background: #0b3cc1;
 }
