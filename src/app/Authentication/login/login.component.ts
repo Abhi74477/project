@@ -8,8 +8,6 @@ import { User } from '../../shared/models/LoginUser';
 import swal from 'sweetalert2';
 import {MatSnackBar, MatSnackBarModule} from '@angular/material/snack-bar';
 
-
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -18,9 +16,7 @@ import {MatSnackBar, MatSnackBarModule} from '@angular/material/snack-bar';
 export class LoginComponent implements OnInit {
   user:User = new User();
   loginForm!: FormGroup;
-  
-  
- 
+
  constructor(private formBuilder:FormBuilder, private router:Router,private userService:UserServiceService,private dialogRef : MatDialog,private snack:MatSnackBar){}
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
@@ -44,9 +40,15 @@ export class LoginComponent implements OnInit {
   }
   userLogin(){
     console.log(this.user);
+    if(this.user.email=='ZiraAdmin@gmail.com' && this.user.password=='Zira@1234'){
+      swal.fire('Success','User is successfully Login','success');
+      this.router.navigate(["/dashboard"]);
+     
+    }else{
     this.userService.userLogin(this.user).subscribe(
       (data) => {
         console.log(data);
+       
        swal.fire('Success','User is successfully Login','success');
        this.router.navigate(["/customer"]);
       
@@ -59,7 +61,7 @@ export class LoginComponent implements OnInit {
         });
         
       }
-        )    }
+        )   } }
   }
 
     

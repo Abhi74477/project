@@ -310,6 +310,11 @@ button{
 thead{
     background-color: #43cea2;
 }
+.modal-title{
+    font-weight: 500;
+    font-size: 24px;
+    margin-top: 10px;
+    }
 .ms-content-wrapper{
     margin-left: 18rem;
 }

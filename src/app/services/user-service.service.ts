@@ -10,11 +10,11 @@ import { NewUser } from '../shared/models/NewUser';
 export class UserServiceService {
 
   constructor(private http:HttpClient) { }
-  baseUrl: string ="http://localhost:1000";
+  baseUrl: string ="http://localhost:8090";
 
   userLogin(user:any){
     
-      return this.http.post<any>("http://localhost:1000/login",user)
+      return this.http.post<any>("http://localhost:8090/login",user)
       };
    
 

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormControl, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
 import { UserServiceService } from '../../services/user-service.service';
 import { Router } from '@angular/router';
 import { NewUser } from '../../shared/models/NewUser';
@@ -37,19 +37,21 @@ export class SignupComponent implements OnInit {
       address: ['', Validators.compose([
         Validators.required,
       ])],
-      confirmPassword: ['', Validators.compose([
-        Validators.required,
-      
-      
-      
-      ])],
+      // confirmPassword: ['', Validators.compose([
+      //   Validators.required,
+       
+      // ])],
       email: ['', Validators.compose([
         Validators.required,
       ])],
      
     }
+    
     );
+    
   }
+  
+ 
   registerUser(){
     console.log(this.newUser);
     this.userService.signUp(this.newUser).subscribe(
@@ -68,6 +70,6 @@ export class SignupComponent implements OnInit {
     )
   }
   
-
+  
   
 }
